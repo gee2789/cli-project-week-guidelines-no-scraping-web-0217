@@ -5,6 +5,7 @@ Violation.new_from_api
 CLIRunner.welcome
 until false
   CLIRunner.search
+  puts " "
 end
 
 #Violation.find_by_code(code)
