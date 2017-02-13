@@ -1,4 +1,4 @@
-class Parking_API
+class ParkingAPI
 
   attr_reader :violation_data
 

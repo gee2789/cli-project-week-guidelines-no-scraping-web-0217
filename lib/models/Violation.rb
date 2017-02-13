@@ -6,7 +6,7 @@ class Violation
   @@all = {}
 
   def self.new_from_api
-    parking_data = Parking_API.new
+    parking_data = ParkingAPI.new
     result = parking_data.violation_data.map do |hash|
       all_other_areas = hash["all_other_areas"]
       code = hash["code"]
