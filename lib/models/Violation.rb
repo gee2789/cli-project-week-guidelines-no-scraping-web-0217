@@ -16,16 +16,18 @@ class Violation
     end
   end
 
-  def self.valid_code?(code)
-    if @@all.keys.include?(code)
-      return true
+  def self.valid_code?(input)
+    if @@all.keys.include?(input)
+      return self.find_by_code(input)
     else
-      return false
+      puts "That's not a valid number.  Try again."
+      input = gets.to_s.chomp
+      self.valid_code?(input)
     end
   end
 
-  def self.find_by_code(code)
-    puts @@all[code].definition
+  def self.find_by_code(input)
+    puts @@all[input].definition
   end
 
 
